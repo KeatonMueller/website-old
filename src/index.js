@@ -1,10 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
+import { indigo, blue } from '@material-ui/core/colors'
+
+const theme = createMuiTheme({
+	palette: {
+		primary: {
+			main: indigo[900]
+		},
+		secondary: {
+			light: blue[50],
+			main: blue[100]
+		},
+		background: {
+			default: blue[50]
+		}
+	},
+	typography: {
+		fontFamily: [
+			'"Avenir Next"',
+			'"Segoe UI"',
+			'Roboto',
+			'-apple-system',
+			'sans-serif',
+			'BlinkMacSystemFont',
+			'"Helvetica Neue"',
+			'Arial',
+			].join(',')
+		}
+})
+
+
+ReactDOM.render(
+	(<MuiThemeProvider theme={theme}>
+		<CssBaseline />
+		<App />
+	</MuiThemeProvider>
+	), document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
