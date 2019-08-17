@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './Components/App';
 import * as serviceWorker from './serviceWorker';
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
-import { indigo, blue } from '@material-ui/core/colors'
+import { indigo, blue, blueGray } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
 	palette: {
@@ -13,11 +13,12 @@ const theme = createMuiTheme({
 			main: indigo[900]
 		},
 		secondary: {
-			light: blue[50],
-			main: blue[100]
+			main: '#F5F5F5',
+			dark: '#B0BEC5'
 		},
 		background: {
-			default: blue[50]
+			// default: blue[50]
+			default: '#F5F5F5'
 		}
 	},
 	typography: {
