@@ -12,7 +12,7 @@ class ProjectsPage extends React.Component {
         document.title = 'Projects | Keaton Mueller'
     }
     render() {
-        const { classes } = this.props;
+        const { classes } = this.props
         return(
 			<div className={classes.aboutRoot}>
 				<Grid container spacing={0} justify='center'>

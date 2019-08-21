@@ -1,7 +1,7 @@
 export default (theme) => (
 	{
 		title: {
-			flexGrow: 1/3
+			// flexGrow: 1/3
 		},
 		gridRoot: {
 			flexGrow: 1
@@ -19,9 +19,7 @@ export default (theme) => (
 			minWidth: '256px',
 			maxWidth: '600px',
 			padding: theme.spacing(3),
-			overflow: 'hidden',
-			borderColor: theme.palette.primary.main,
-			borderRadius: '5px'
+			overflow: 'hidden'
 		},
 		portrait:{
 			display: 'block',
@@ -46,7 +44,34 @@ export default (theme) => (
 		},
 		footer: {
 			marginTop: theme.spacing(4),
-			backgroundColor: theme.palette.secondary.dark
+			backgroundColor: theme.palette.secondary.dark,
+			left: 0,
+			bottom: 0,
+			width: '100%'
+		},
+		hideSmall: {
+			[theme.breakpoints.up('sm')]: {
+				display: 'block'
+			},
+			[theme.breakpoints.down('xs')]: {
+				display: 'none'
+			}
+		},
+		xsIcons: {
+			[theme.breakpoints.up('sm')]: {
+				display: 'none'
+			},
+			[theme.breakpoints.down('xs')]: {
+				display: 'flex'
+			}
+		},
+		smIcons: {
+			[theme.breakpoints.up('sm')]: {
+				display: 'flex'
+			},
+			[theme.breakpoints.down('xs')]: {
+				display: 'none'
+			}
 		}
 	}
 )

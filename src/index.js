@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Components/App';
+import Footer from './Components/Footer'
+
 import * as serviceWorker from './serviceWorker';
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
-import { indigo, blue, blueGray } from '@material-ui/core/colors'
+import { indigo } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
 	palette: {
@@ -37,10 +39,17 @@ const theme = createMuiTheme({
 
 
 ReactDOM.render(
-	(<MuiThemeProvider theme={theme}>
-		<CssBaseline />
-		<App />
-	</MuiThemeProvider>
+	(<div style={{
+		display: 'flex',
+		flexDirection: 'column',
+		minHeight: '100vh'
+	}}>
+		<MuiThemeProvider theme={theme}>
+			<CssBaseline />
+			<App />
+			<Footer />
+		</MuiThemeProvider>
+	</div>
 	), document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

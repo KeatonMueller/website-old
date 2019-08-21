@@ -15,7 +15,7 @@ class AboutPage extends React.Component {
         document.title = 'About | Keaton Mueller'
     }
     render() {
-        const { classes } = this.props;
+        const { classes } = this.props
         return(
 			<div className={classes.aboutRoot}>
 				<Grid container spacing={0} justify='center'>
@@ -24,25 +24,27 @@ class AboutPage extends React.Component {
 							About
 						</Typography>
 					</Grid>
-					<Paper className={classes.main} >
-						<Grid container spacing={0}>
-							<Grid item xs={12} md={6} container justify='center' alignItems='center' className={classes.gridItem}>
-								<Typography className={classes.paragraph}>
-									My name's Keaton Mueller, and I'm a Computer Science major at Yale University. I'm currently in my third year, and I plan on receiving a B.S. in Computer Science in May 2021.
-								</Typography>
-							</Grid>
-							<Grid item xs={12} md={6} container justify='center' className={classes.gridItem}>
-								<div style={{overflow: 'hidden'}}>
-									<img className={classes.portrait} src={Portrait} alt='Portrait' />
-								</div>
-							</Grid>
-							<Grid item xs={12} container justify='center' className={classes.gridItem}>
-								<Typography className={classes.paragraph}>
-									I'm currently looking for a technical internship for the Summer of 2020. My passions include software engineering, machine learning, natural language processing, and learning new technologies.
-								</Typography>
-							</Grid>
-						</Grid>
-					</Paper>
+                    <Grid item xs={12} container justify='center'>
+    					<Paper className={classes.main} >
+    						<Grid container spacing={0}>
+    							<Grid item xs={12} md={6} container justify='center' alignItems='center' className={classes.gridItem}>
+    								<Typography className={classes.paragraph}>
+    									My name is Keaton Mueller, and I'm a Computer Science major at Yale University. I'm currently in my third year, and I plan on receiving a B.S. in Computer Science in May 2021.
+    								</Typography>
+    							</Grid>
+    							<Grid item xs={12} md={6} container justify='center' className={classes.gridItem}>
+    								<div style={{overflow: 'hidden'}}>
+    									<img className={classes.portrait} src={Portrait} alt='Portrait' />
+    								</div>
+    							</Grid>
+    							<Grid item xs={12} container justify='center' className={classes.gridItem}>
+    								<Typography className={classes.paragraph}>
+    									I'm currently looking for a technical internship for the Summer of 2020. My passions include software engineering, machine learning, natural language processing, and learning new technologies.
+    								</Typography>
+    							</Grid>
+    						</Grid>
+    					</Paper>
+                    </Grid>
 				</Grid>
 			</div>
         )

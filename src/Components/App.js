@@ -2,7 +2,6 @@ import React from 'react'
 import { withStyles } from '@material-ui/styles'
 
 import Header from './Header'
-import Footer from './Footer'
 import AboutPage from './AboutPage'
 import ProjectsPage from './ProjectsPage'
 
@@ -24,7 +23,7 @@ class App extends React.Component {
         this.setState({ tab: newValue })
     }
     render() {
-        const { classes } = this.props;
+        const { classes } = this.props
         return(
             <div className={classes.gridRoot}>
                 <Header
@@ -40,7 +39,6 @@ class App extends React.Component {
                     <ProjectsPage {...this.props} /> :
                     null
                 }
-                <Footer />
             </div>
         )
     }
