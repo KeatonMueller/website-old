@@ -31,7 +31,7 @@ class Footer extends React.Component {
                     </small>
                     <br />
                     <small style={{color:'#ffffff'}}>
-                        <a href='mailto:keaton.mueller@yale.edu' target='_blank' rel='noopener noreferrer' style={{color:'#f5f5f5'}}>
+                        <a href='mailto:keaton.mueller@yale.edu' target='_blank' rel='noopener noreferrer' style={{color:'#ffffff'}}>
                             keaton.mueller@yale.edu
                         </a> | 914.260.4235
                     </small>

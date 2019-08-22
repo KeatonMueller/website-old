@@ -15,8 +15,6 @@ class IconList extends React.Component {
         newWindow.location = event.currentTarget.id
     }
     render() {
-        // const { classes } = this.props
-
         return(
 			<React.Fragment>
 	            <Grid item xs={4} md={2} container justify='center'>
