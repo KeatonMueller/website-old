@@ -72,6 +72,9 @@ export default (theme) => (
 		},
 		iconButton: {
 			color: '#ffffff'
+		},
+		indent: {
+			textIndent: '32px'
 		}
 	}
 )

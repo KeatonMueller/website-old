@@ -12,28 +12,29 @@ import styles from '../Styles'
 
 class ProjectDialog extends React.Component {
 	renderContent(){
+		const { classes } = this.props
 		switch(this.props.title){
 			case 'Chess':
 				return (
-					<Typography>
+					<Typography className={classes.indent}>
 						This application implements the game of Chess for one or two players. It is coded in Java using the Swing library. For the one player mode, your opponent is an AI coded using the Minimax algorithm with Alpha Beta pruning. To view the source code, visit <a href='https://www.github.com/KeatonMueller/chess' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
 				)
 			case 'Tetris':
 				return (
-					<Typography>
+					<Typography className={classes.indent}>
 						This application implements the game of Tetris. It is coded in Java using the Swing library. To view the source code, visit <a href='https://www.github.com/KeatonMueller/tetris' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
 				)
 			case 'Minesweeper':
 				return (
-					<Typography>
+					<Typography className={classes.indent}>
 						This application implements the game of Minesweeper. It is coded in Java using the Swing library. To view the source code, visit <a href='https://www.github.com/KeatonMueller/minesweeper' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
 				)
 			case 'Personal Website':
 				return (
-					<Typography>
+					<Typography className={classes.indent}>
 						This is my personal website, coded using React and Material-UI. To view the source code, visit <a href='https://www.github.com/KeatonMueller/keatonmueller.github.io/tree/code' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
 				)
