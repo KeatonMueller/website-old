@@ -5,8 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
-import Portrait from '../Portrait.JPG'
-
+import Portrait from '../Images/Portrait.JPG'
 
 import styles from '../Styles'
 
@@ -17,7 +16,7 @@ class AboutPage extends React.Component {
     render() {
         const { classes } = this.props
         return(
-			<div className={classes.aboutRoot}>
+			<div className={classes.tabRoot}>
 				<Grid container spacing={0} justify='center'>
 					<Grid item xs={12} container justify='center' align='left'>
 						<Typography variant='h5' className={classes.pageLabel}>

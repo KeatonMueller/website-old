@@ -1,12 +1,9 @@
 export default (theme) => (
 	{
-		title: {
-			// flexGrow: 1/3
-		},
 		gridRoot: {
 			flexGrow: 1
 		},
-		aboutRoot: {
+		tabRoot: {
 			marginTop: theme.spacing(2)
 		},
 		main:{
@@ -23,14 +20,8 @@ export default (theme) => (
 		},
 		portrait:{
 			display: 'block',
-			// maxWidth: '194px',
-			// maxHeight: '256px',
-			// height: 'auto',
-			// width: 'auto'
 			width: '100%',
 			height: 'auto',
-			// width: '289px',
-			// height: '380px'
 		},
 		gridItem: {
 			padding: theme.spacing(1)
@@ -72,6 +63,15 @@ export default (theme) => (
 			[theme.breakpoints.down('xs')]: {
 				display: 'none'
 			}
+		},
+		titleBar: {
+			background: 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%)'
+		},
+		bold: {
+			fontWeight: 'bold'
+		},
+		iconButton: {
+			color: '#ffffff'
 		}
 	}
 )

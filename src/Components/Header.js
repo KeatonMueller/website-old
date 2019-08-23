@@ -15,13 +15,12 @@ class Header extends React.Component {
         document.title = 'Projects | Keaton Mueller'
     }
     render() {
-        const { classes } = this.props
         return(
 			<AppBar position="static">
 				<Toolbar>
                     <Grid container justify='space-between'>
                         <Grid item xs={6} sm={4} container alignItems='center'>
-            				<Typography variant='h5' className={classes.title}>
+            				<Typography variant='h5'>
             					Keaton Mueller
             				</Typography>
                         </Grid>
