@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.js": "/static/js/main.6c6ba70e.chunk.js",
-    "main.js.map": "/static/js/main.6c6ba70e.chunk.js.map",
+    "main.js": "/static/js/main.ba3e4e95.chunk.js",
+    "main.js.map": "/static/js/main.ba3e4e95.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.37f35684.chunk.js": "/static/js/2.37f35684.chunk.js",
-    "static/js/2.37f35684.chunk.js.map": "/static/js/2.37f35684.chunk.js.map",
+    "static/js/2.94a56e4d.chunk.js": "/static/js/2.94a56e4d.chunk.js",
+    "static/js/2.94a56e4d.chunk.js.map": "/static/js/2.94a56e4d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b9a73fe210f1a359938a93de69f8adf8.js": "/precache-manifest.b9a73fe210f1a359938a93de69f8adf8.js",
+    "precache-manifest.159cee2da06add69225d264b5f67c7f7.js": "/precache-manifest.159cee2da06add69225d264b5f67c7f7.js",
     "service-worker.js": "/service-worker.js",
-    "static/media/Portrait.JPG": "/static/media/Portrait.8c67c40b.JPG"
+    "static/media/Chess.png": "/static/media/Chess.849b5092.png",
+    "static/media/Minesweeper.png": "/static/media/Minesweeper.8656d6bb.png",
+    "static/media/Portrait.JPG": "/static/media/Portrait.8c67c40b.JPG",
+    "static/media/Tetris.png": "/static/media/Tetris.6d966a72.png",
+    "static/media/Website.png": "/static/media/Website.12bb328b.png"
   }
 }
