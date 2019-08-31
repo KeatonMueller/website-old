@@ -24,7 +24,7 @@ class Header extends React.Component {
             					Keaton Mueller
             				</Typography>
                         </Grid>
-                        <Grid item xs={6} sm={4}container justify='center'>
+                        <Grid item xs={6} sm={4} container justify='center'>
             				<Tabs value={this.props.tab} onChange={this.props.onChange}>
             					<Tab label='About' />
             					<Tab label='Projects' />
