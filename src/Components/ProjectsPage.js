@@ -1,6 +1,8 @@
 import React from 'react'
 import { withStyles } from '@material-ui/styles'
 
+import { Link } from 'react-router-dom'
+
 import Grid from '@material-ui/core/Grid'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
@@ -61,7 +63,14 @@ class ProjectsPage extends React.Component {
 					<Paper className={classes.main} >
 						<GridList cols={3} spacing={8}>
                             <GridListTile cols={3} rows={2}>
-                                <img src={Cube} alt="Rubik's Cube" />
+                                <Link to='/cube'>
+                                    <img src={Cube} alt="Rubik's Cube" style={{
+                                        left: '50%',
+                                        height: '100%',
+                                        position: 'relative',
+                                        transform: 'translateX(-50%)'
+                                    }} />
+                                </Link>
                                 <GridListTileBar
                                     title="Rubik's Cube"
                                     titlePosition='top'

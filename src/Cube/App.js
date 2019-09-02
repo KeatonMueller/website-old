@@ -7,6 +7,8 @@ import * as OrbitControls from 'three-orbitcontrols'
 import Cubie from './Cubie'
 import Header from './Header'
 
+const ANIMATION_SPEED = 0.2
+
 class App extends React.Component {
     constructor(props){
         super(props)
@@ -173,8 +175,8 @@ class App extends React.Component {
                     this.animating = false
                 }
                 else{
-                    cubie.rotate(cubie.animateAxis, cubie.animateDir * 0.2)
-                    cubie.angle += 0.2
+                    cubie.rotate(cubie.animateAxis, cubie.animateDir * ANIMATION_SPEED)
+                    cubie.angle += ANIMATION_SPEED
                 }
             }
             // cubie.rotate('z', 0.2)
