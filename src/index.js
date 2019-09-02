@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './Components/App';
 import Cube from './Cube/App'
 import Footer from './Components/Footer'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -47,7 +47,7 @@ ReactDOM.render(
 	}}>
 		<MuiThemeProvider theme={theme}>
 			<CssBaseline />
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<HashRouter basename={process.env.PUBLIC_URL}>
 				<Switch>
 					<Route exact path='/'>
 						<App />
@@ -59,7 +59,7 @@ ReactDOM.render(
 					</Route>
 					<Route component={() => (<div>404 Not Found</div>)} />
 				</Switch>
-			</BrowserRouter>
+			</HashRouter>
 		</MuiThemeProvider>
 	</div>
 	), document.getElementById('root'));
