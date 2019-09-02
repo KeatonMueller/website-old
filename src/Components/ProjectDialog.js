@@ -1,6 +1,8 @@
 import React from 'react'
 import { withStyles } from '@material-ui/styles'
 
+import { Link } from 'react-router-dom'
+
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -19,6 +21,17 @@ class ProjectDialog extends React.Component {
 					<Typography className={classes.indent}>
 						This application implements the game of Chess for one or two players. It is coded in Java using the Swing library. For the one player mode, your opponent is an AI coded using the Minimax algorithm with Alpha Beta pruning. To view the source code, visit <a href='https://www.github.com/KeatonMueller/chess' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
+				)
+			case "Rubik's Cube":
+				return (
+					<React.Fragment>
+						<Typography paragraph className={classes.indent}>
+							This application implements a virtual Rubik's Cube. It is coded in JavaScript using Three.js to handle 3D rendering. To view the source code, visit <a href='https://www.github.com/KeatonMueller/chess' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
+						</Typography>
+						<Typography className={classes.indent}>
+							To view the application in browser, click <Link to='/cube' style={{color:'#000000'}}>here</Link>.
+						</Typography>
+					</React.Fragment>
 				)
 			case 'Tetris':
 				return (

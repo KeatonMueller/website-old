@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography'
 import InfoIcon from '@material-ui/icons/Info'
 
 import Chess from '../Images/Chess.png'
+import Cube from '../Images/Cube.png'
 import Minesweeper from '../Images/Minesweeper.png'
 import Tetris from '../Images/Tetris.png'
 import Website from '../Images/Website.png'
@@ -59,6 +60,24 @@ class ProjectsPage extends React.Component {
 					</Grid>
 					<Paper className={classes.main} >
 						<GridList cols={3} spacing={8}>
+                            <GridListTile cols={3} rows={2}>
+                                <img src={Cube} alt="Rubik's Cube" />
+                                <GridListTileBar
+                                    title="Rubik's Cube"
+                                    titlePosition='top'
+                                    actionIcon={
+                                        <IconButton
+                                            id="Rubik's Cube"
+                                            onClick={this.handleClick}
+                                            className={classes.iconButton}
+                                        >
+                                            <InfoIcon />
+                                        </IconButton>
+                                    }
+                                    className={classes.titleBar}
+                                    classes={{ title: classes.bold }}
+                                />
+                            </GridListTile>
                             <GridListTile cols={2} rows={2}>
                                 <img src={Chess} alt='Chess' />
                                 <GridListTileBar
