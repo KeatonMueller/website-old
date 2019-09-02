@@ -26,7 +26,7 @@ class ProjectDialog extends React.Component {
 				return (
 					<React.Fragment>
 						<Typography paragraph className={classes.indent}>
-							This application implements a virtual Rubik's Cube. It is coded in JavaScript using Three.js to handle 3D rendering. To view the source code, visit <a href='https://www.github.com/KeatonMueller/chess' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
+							This application implements a virtual Rubik's Cube. It is coded in JavaScript using Three.js to handle 3D rendering. To view the source code, visit <a href='https://www.github.com/KeatonMueller/cube' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 						</Typography>
 						<Typography className={classes.indent}>
 							To view the application in browser, click <Link to='/cube' style={{color:'#000000'}}>here</Link>.
