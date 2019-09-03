@@ -1,13 +1,13 @@
 import React from 'react'
-
 import * as THREE from 'three'
 import * as OrbitControls from 'three-orbitcontrols'
-// import * as math from 'mathjs'
-
 import Cubie from './Cubie'
 import Header from './Header'
+import Config from './Config'
+const CUBIE_SIZE = Config.CUBIE_SIZE
 
 const ANIMATION_SPEED = 0.2
+
 
 class App extends React.Component {
     constructor(props){
@@ -30,6 +30,13 @@ class App extends React.Component {
     }
     onKeyPress(event){
         switch(event.key){
+            case 'a':
+                this.cube.forEach((cubie) => {
+                    if(cubie.fixedPositionVector.z === CUBIE_SIZE){
+                        cubie.rotate('z', Math.PI * 0.25)
+                    }
+                })
+                break
             case 'b':
                 this.moveBuffer.push(this.moveB(1))
                 break
@@ -78,7 +85,7 @@ class App extends React.Component {
     }
     moveL = (dir) => () => {
         this.cube.forEach((cubie) => {
-            if(cubie.positionVector.x === -1){
+            if(cubie.positionVector.x === -CUBIE_SIZE){
                 cubie.animating = true
                 cubie.angle = 0
                 cubie.animateAxis = 'x'
@@ -90,7 +97,7 @@ class App extends React.Component {
     }
     moveR = (dir) => () => {
         this.cube.forEach((cubie) => {
-            if(cubie.positionVector.x === 1){
+            if(cubie.positionVector.x === CUBIE_SIZE){
                 cubie.animating = true
                 cubie.angle = 0
                 cubie.animateAxis = 'x'
@@ -102,7 +109,7 @@ class App extends React.Component {
     }
     moveF = (dir) => () => {
         this.cube.forEach((cubie) => {
-            if(cubie.positionVector.z === 1){
+            if(cubie.positionVector.z === CUBIE_SIZE){
                 cubie.animating = true
                 cubie.angle = 0
                 cubie.animateAxis = 'z'
@@ -114,7 +121,7 @@ class App extends React.Component {
     }
     moveB = (dir) => () => {
         this.cube.forEach((cubie) => {
-            if(cubie.positionVector.z === -1){
+            if(cubie.positionVector.z === -CUBIE_SIZE){
                 cubie.animating = true
                 cubie.angle = 0
                 cubie.animateAxis = 'z'
@@ -126,7 +133,7 @@ class App extends React.Component {
     }
     moveU = (dir) => () => {
         this.cube.forEach((cubie) => {
-            if(cubie.positionVector.y === 1){
+            if(cubie.positionVector.y === CUBIE_SIZE){
                 cubie.animating = true
                 cubie.angle = 0
                 cubie.animateAxis = 'y'
@@ -138,7 +145,7 @@ class App extends React.Component {
     }
     moveD = (dir) => () => {
         this.cube.forEach((cubie) => {
-            if(cubie.positionVector.y === -1){
+            if(cubie.positionVector.y === -CUBIE_SIZE){
                 cubie.animating = true
                 cubie.angle = 0
                 cubie.animateAxis = 'y'
@@ -196,7 +203,12 @@ class App extends React.Component {
 
     onDocumentMouseDown(event){
         // event.preventDefault()
-
+        // if(event.button === 2){
+        //     this.controls.enabled = false
+        // }
+        // else if(event.button === 0){
+        //     this.controls.enabled = true
+        // }
     }
     componentDidMount(){
 
@@ -207,16 +219,17 @@ class App extends React.Component {
         this.scene = new THREE.Scene()
         this.scene.background = new THREE.Color(0xf5f5f5);
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-        this.camera.position.x = 3
-        this.camera.position.y = 3
-        this.camera.position.z = 6
+        this.camera.position.x = 3*CUBIE_SIZE
+        this.camera.position.y = 4*CUBIE_SIZE
+        this.camera.position.z = 7*CUBIE_SIZE
         this.renderer = new THREE.WebGLRenderer()
+        this.renderer.setPixelRatio(window.devicePixelRatio)
         this.renderer.setSize(window.innerWidth, window.innerHeight)
         domElement.appendChild(this.renderer.domElement)
 
         this.controls = new OrbitControls(this.camera, this.renderer.domElement)
-        this.controls.minDistance = 5
-        this.controls.maxDistance = 20
+        this.controls.minDistance = CUBIE_SIZE*5
+        this.controls.maxDistance = CUBIE_SIZE*15
         this.controls.enablePan = false
         this.controls.enableZoom = false
         this.controls.update()
@@ -225,7 +238,7 @@ class App extends React.Component {
         for(var x = -1; x <= 1; x++){
             for(var y = -1; y <= 1; y++){
                 for(var z = -1; z <= 1; z++){
-                    this.cube.push(new Cubie(x, y, z))
+                    this.cube.push(new Cubie(x*CUBIE_SIZE, y*CUBIE_SIZE, z*CUBIE_SIZE))
                 }
             }
         }
@@ -244,9 +257,8 @@ class App extends React.Component {
     render(){
         return (
             <React.Fragment>
-            <Header />
-            <div id='threejs'>
-            </div>
+                <Header />
+                <div id='threejs'/>
             </React.Fragment>
         )
     }
