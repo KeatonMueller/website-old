@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.0e0acde8.chunk.js",
-    "main.js.map": "/static/js/main.0e0acde8.chunk.js.map",
+    "main.js": "/static/js/main.468e43c0.chunk.js",
+    "main.js.map": "/static/js/main.468e43c0.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.58a44c17.chunk.js": "/static/js/2.58a44c17.chunk.js",
-    "static/js/2.58a44c17.chunk.js.map": "/static/js/2.58a44c17.chunk.js.map",
+    "static/js/2.eecf8709.chunk.js": "/static/js/2.eecf8709.chunk.js",
+    "static/js/2.eecf8709.chunk.js.map": "/static/js/2.eecf8709.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.caad387d1d51bfd59498cbf2ee83f90d.js": "/precache-manifest.caad387d1d51bfd59498cbf2ee83f90d.js",
+    "precache-manifest.c81cfac013986c77f8aa5185d7bb3bd8.js": "/precache-manifest.c81cfac013986c77f8aa5185d7bb3bd8.js",
     "service-worker.js": "/service-worker.js",
     "static/media/Chess.png": "/static/media/Chess.849b5092.png",
     "static/media/Cube.png": "/static/media/Cube.a37e20de.png",
