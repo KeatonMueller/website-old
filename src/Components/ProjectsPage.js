@@ -16,6 +16,7 @@ import InfoIcon from '@material-ui/icons/Info'
 import Chess from '../Images/Chess.png'
 import Cube from '../Images/Cube.png'
 import Minesweeper from '../Images/Minesweeper.png'
+import Search from '../Images/Search.png'
 import Tetris from '../Images/Tetris.png'
 import Website from '../Images/Website.png'
 
@@ -62,6 +63,31 @@ class ProjectsPage extends React.Component {
 					</Grid>
 					<Paper className={classes.main} >
 						<GridList cols={3} spacing={8}>
+                            <GridListTile cols={3} rows={1}>
+                                <Link to='/search'>
+                                    <img src={Search} alt="Search Grid" style={{
+                                        top: '50%',
+                                        width: '100%',
+                                        position: 'relative',
+                                        transform: 'translateY(-50%)'
+                                    }} />
+                                </Link>
+                                <GridListTileBar
+                                    title="Search Algorithm Visualization"
+                                    titlePosition='top'
+                                    actionIcon={
+                                        <IconButton
+                                            id="Search Algorithm Visualization"
+                                            onClick={this.handleClick}
+                                            className={classes.iconButton}
+                                        >
+                                            <InfoIcon />
+                                        </IconButton>
+                                    }
+                                    className={classes.titleBar}
+                                    classes={{ title: classes.bold }}
+                                />
+                            </GridListTile>
                             <GridListTile cols={3} rows={2}>
                                 <Link to='/cube'>
                                     <img src={Cube} alt="Rubik's Cube" style={{

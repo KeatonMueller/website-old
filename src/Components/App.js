@@ -1,7 +1,7 @@
 import React from 'react'
 import { withStyles } from '@material-ui/styles'
 
-import Header from './Header'
+import Header from './MainHeader'
 import AboutPage from './AboutPage'
 import ProjectsPage from './ProjectsPage'
 

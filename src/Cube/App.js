@@ -1,10 +1,11 @@
 import React from 'react'
 import * as THREE from 'three'
 import * as OrbitControls from 'three-orbitcontrols'
-import Header from './Header'
+import Header from '../Components/SubHeader'
 import Cubie from './Cubie'
 
 const ANIMATION_SPEED = 0.2
+const HEADER_SIZE = 56
 const axes = new Map([
     ['x', new THREE.Vector3(1, 0, 0)],
     ['y', new THREE.Vector3(0, 1, 0)],
@@ -28,8 +29,14 @@ class App extends React.Component {
         this.onDocumentMouseDown = this.onDocumentMouseDown.bind(this)
         this.onDocumentMouseUp = this.onDocumentMouseUp.bind(this)
         this.onDocumentMouseMove = this.onDocumentMouseMove.bind(this)
+        this.onTouchStart = this.onTouchStart.bind(this)
+        this.onTouchEnd = this.onTouchEnd.bind(this)
+        this.onTouchMove = this.onTouchMove.bind(this)
     }
     componentDidMount(){
+        document.addEventListener('touchstart', this.onTouchStart, false)
+        document.addEventListener('touchend', this.onTouchEnd, false)
+        document.addEventListener('touchmove', this.onTouchMove, false)
         document.addEventListener('mousedown', this.onDocumentMouseDown, false)
         document.addEventListener('mouseup', this.onDocumentMouseUp, false)
         document.addEventListener('mousemove', this.onDocumentMouseMove, false)
@@ -290,7 +297,25 @@ class App extends React.Component {
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(window.innerWidth, window.innerHeight);
     }
+    onTouchStart(event){
+        event.offsetX = event.touches[0].clientX
+        event.offsetY = event.touches[0].clientY - HEADER_SIZE
+        // alert(event.offsetX+', '+event.offsetY)
+
+        this.onDocumentMouseDown(event)
+    }
+    onTouchEnd(event){
+        this.onDocumentMouseUp(event)
+    }
+    onTouchMove(event){
+        event.offsetX = event.touches[0].clientX
+        event.offsetY = event.touches[0].clientY - HEADER_SIZE
+        // alert(event.offsetX+', '+event.offsetY)
+
+        this.onDocumentMouseMove(event)
+    }
     onDocumentMouseDown(event){
+        // console.log(event.offsetX+', '+event.offsetY)
         this.mouse.x = (event.offsetX / window.innerWidth) * 2 - 1
         this.mouse.y = -(event.offsetY / window.innerHeight) * 2 + 1
 

@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './Components/App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './Components/App'
 import Cube from './Cube/App'
+import Search from './Search/App'
 import Footer from './Components/Footer'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
@@ -55,6 +56,10 @@ ReactDOM.render(
 					</Route>
 					<Route path='/cube'>
 						<Cube />
+						<Footer />
+					</Route>
+					<Route path='/search'>
+						<Search />
 						<Footer />
 					</Route>
 					<Route component={() => (<div>404 Not Found</div>)} />

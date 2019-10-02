@@ -45,6 +45,17 @@ class ProjectDialog extends React.Component {
 						This application implements the game of Minesweeper. It is coded in Java using the Swing library. To view the source code, visit <a href='https://www.github.com/KeatonMueller/minesweeper' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
 				)
+			case 'Search Algorithm Visualization':
+				return (
+					<React.Fragment>
+						<Typography paragraph className={classes.indent}>
+						This application is a visualization tool for various search algorithms. Currently it supports DFS, BFS, and A* Search, but more algorithms are intended to be added. The animations are rendered using p5.js. To view the source code, visit <a href='https://www.github.com/KeatonMueller/search' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
+						</Typography>
+						<Typography className={classes.indent}>
+							To view the application in browser, click <Link to='/search' style={{color:'#000000'}}>here</Link>.
+						</Typography>
+					</React.Fragment>
+				)
 			case 'Personal Website':
 				return (
 					<Typography className={classes.indent}>
