@@ -28,7 +28,7 @@ class AboutPage extends React.Component {
     						<Grid container spacing={0}>
     							<Grid item xs={12} md={6} container justify='center' alignItems='center' className={classes.gridItem}>
     								<Typography className={classes.paragraph}>
-    									My name is Keaton Mueller, and I'm a Computer Science major at Yale University. I'm currently in my third year, and I plan on receiving a B.S. in Computer Science in May 2021.
+    									My name is Keaton Mueller, and I'm a Computer Science major at Yale University. I'm in my fourth year, and I plan on receiving a B.S. in Computer Science in May 2021.
     								</Typography>
     							</Grid>
     							<Grid item xs={12} md={6} container justify='center' className={classes.gridItem}>
@@ -38,7 +38,7 @@ class AboutPage extends React.Component {
     							</Grid>
     							<Grid item xs={12} container justify='center' className={classes.gridItem}>
     								<Typography className={classes.paragraph}>
-    									I'm currently looking for a technical internship for the Summer of 2020. My passions include software engineering, machine learning, natural language processing, and learning new technologies.
+    									I'm currently looking for a full time Software Engineering role in New York City. My interests include programming, machine learning, natural language processing, and learning new technologies.
     								</Typography>
     							</Grid>
     						</Grid>

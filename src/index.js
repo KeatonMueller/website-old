@@ -6,8 +6,6 @@ import Search from './Search/App'
 import Footer from './Components/Footer'
 import { HashRouter, Route, Switch } from 'react-router-dom'
 
-import * as serviceWorker from './serviceWorker'
-
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import { indigo } from '@material-ui/core/colors'
@@ -68,8 +66,3 @@ ReactDOM.render(
 		</MuiThemeProvider>
 	</div>
 	), document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
