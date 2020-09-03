@@ -19,6 +19,7 @@ import Minesweeper from '../Images/Minesweeper.png'
 import Search from '../Images/Search.png'
 import Tetris from '../Images/Tetris.png'
 import Website from '../Images/Website.png'
+import RLCube from '../Images/RLCube.png'
 
 import ProjectDialog from './ProjectDialog'
 
@@ -63,7 +64,25 @@ class ProjectsPage extends React.Component {
 					</Grid>
 					<Paper className={classes.main} >
 						<GridList cols={3} spacing={8}>
-                            <GridListTile cols={3} rows={1}>
+                            <GridListTile cols={1} rows={1}>
+                                <img src={RLCube} alt='rl-cube' />
+                                <GridListTileBar
+                                    title='rl-cube'
+                                    titlePosition='top'
+                                    actionIcon={
+                                        <IconButton
+                                            id='rl-cube'
+                                            onClick={this.handleClick}
+                                            className={classes.iconButton}
+                                        >
+                                            <InfoIcon />
+                                        </IconButton>
+                                    }
+                                    className={classes.titleBar}
+                                    classes={{ title: classes.bold }}
+                                />
+                            </GridListTile>
+                            <GridListTile cols={2} rows={1}>
                                 <Link to='/search'>
                                     <img src={Search} alt="Search Grid" style={{
                                         top: '50%',

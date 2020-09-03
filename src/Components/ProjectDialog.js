@@ -49,7 +49,7 @@ class ProjectDialog extends React.Component {
 				return (
 					<React.Fragment>
 						<Typography paragraph className={classes.indent}>
-						This application is a visualization tool for various search algorithms. Currently it supports DFS, BFS, and A* Search, but more algorithms are intended to be added. The animations are rendered using p5.js. To view the source code, visit <a href='https://www.github.com/KeatonMueller/search' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
+							This application is a visualization tool for various search algorithms. Currently it supports DFS, BFS, and A* Search, but more algorithms are intended to be added. The animations are rendered using p5.js. To view the source code, visit <a href='https://www.github.com/KeatonMueller/search' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 						</Typography>
 						<Typography className={classes.indent}>
 							To view the application in browser, click <Link to='/search' style={{color:'#000000'}}>here</Link>.
@@ -60,6 +60,12 @@ class ProjectDialog extends React.Component {
 				return (
 					<Typography className={classes.indent}>
 						This is my personal website, coded using React and Material-UI. To view the source code, visit <a href='https://www.github.com/KeatonMueller/keatonmueller.github.io/tree/code' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
+					</Typography>
+				)
+			case 'rl-cube':
+				return (
+					<Typography className={classes.indent}>
+						This is a reinforcement learning project that aims to solve the Rubik's Cube without any prior knowledge. It is currently able to solve most length 12 scrambles in under half of a second. To view the source code, visit <a href='https://github.com/KeatonMueller/rl-cube' target='_blank' rel='noopener noreferrer' style={{color:'#000000'}}>GitHub</a>.
 					</Typography>
 				)
 			default:
