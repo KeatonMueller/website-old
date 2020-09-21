@@ -38,7 +38,7 @@ class AboutPage extends React.Component {
     							</Grid>
     							<Grid item xs={12} container justify='center' className={classes.gridItem}>
     								<Typography className={classes.paragraph}>
-    									I'm currently looking for a full time Software Engineering role in New York City. My interests include programming, machine learning, natural language processing, and learning new technologies.
+    									I'm very excited to be joining Amazon as a full-time Software Development Engineer once I graduate. I will be based in New York City and working for the AWS organization on the EBS control plane team.
     								</Typography>
     							</Grid>
     						</Grid>
