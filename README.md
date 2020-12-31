@@ -1,4 +1,7 @@
-# keatonmueller.github.io
-This is my personal website, coded using React and Material UI.
+# website-old
+This is my old personal website I made using React and Material UI.
 
-You can see it running by visiting https://keatonmueller.github.io/#/
+It's been replaced with a purely HTML, CSS, and JavaScript site.
+
+
+See the new website: https://keatonmueller.github.io/
